@@ -1,7 +1,15 @@
+version: '2'
 
-service:
-    image: httpd
-    ports: 
-        - 8080:80
-    volumes:
-        - ./html/:/usr/local/apache2/htdocs/:ro
+services:
+    myWebsite:
+        image: httpd
+        environment:
+            - VIRTUAL_HOST=my.localhost
+        volumes:
+            - ./html/:/usr/local/apache2/htdocs/:ro
+        networks:
+            - nginxproxygitdeploy_net-proxy
+
+networks:
+    nginxproxygitdeploy_net-proxy:
+        external: true
