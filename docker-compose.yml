@@ -5,6 +5,7 @@ services:
         image: httpd
         environment:
             - VIRTUAL_HOST=fenrir.ovh
+            - LETSENCRYPT_HOST=fenrir.ovh
         volumes:
             - ./html/:/usr/local/apache2/htdocs/:ro
         networks:
