@@ -5,7 +5,8 @@ services:
         image: httpd
         environment:
             - VIRTUAL_HOST=fenrir.ovh,alexismartial.fr
-            - LETSENCRYPT_HOST=fenrir.ovh
+            - LETSENCRYPT_HOST=fenrir.ovh,alexismartial.fr
+            - LETSENCRYPT_EMAIL=contact@alexismartial.fr
         volumes:
             - ./html/:/usr/local/apache2/htdocs/:ro
         networks:
