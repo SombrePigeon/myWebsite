@@ -1,5 +1,5 @@
 
-update: html/index.html
+update: html/index.html docker-compose.yml
 	docker-compose up -d
 	touch update
 
