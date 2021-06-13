@@ -1,5 +1,6 @@
 
-update: html/index.html docker-compose.yml
+update: docker-compose.yml
+	$(MAKE) down
 	docker-compose up -d
 	touch update
 
