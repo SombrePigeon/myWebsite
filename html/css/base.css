@@ -1,0 +1,51 @@
+@media (prefers-color-scheme: light)
+{
+    :root
+    {
+        --color-theme-1:#FCF8EC;
+        --color-theme-2:#D0E8F2;
+        --color-theme-3:#79A3B1;
+        --color-theme-4:#456268;
+    }
+}
+
+@media (prefers-color-scheme: dark)
+{
+    :root
+    {
+        --color-theme-1:#382933;
+        --color-theme-2:#3B5249;
+        --color-theme-3:#519872;
+        --color-theme-4:#A4B494;
+    }
+}
+
+:root
+{
+    --base-padding:0.8em;
+}
+
+/*reset most default css*/
+html,
+body,
+iframe
+{
+    height: 100%;
+    width: 100%;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body,
+body *
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    grid-auto-columns: 1fr;
+}

@@ -1,53 +1,25 @@
-@media (prefers-color-scheme: light)
-{
-    :root
-    {
-        --color-theme-1:#FCF8EC;
-        --color-theme-2:#D0E8F2;
-        --color-theme-3:#79A3B1;
-        --color-theme-4:#456268;
-    }
-}
-
-@media (prefers-color-scheme: dark)
-{
-    :root
-    {
-        --color-theme-1:#382933;
-        --color-theme-2:#3B5249;
-        --color-theme-3:#519872;
-        --color-theme-4:#A4B494;
-    }
-}
-/*reset most default css*/
-html, body
-{
-    height: 100%;
-}
-
-*
-{
-    margin: 0;
-    padding: 0;
-}
+@import url(base.css);
 
 body
 {
     color: var(--color-theme-4);
     font-size: 2em;
-    display: grid;
     grid-template-rows: 
         min-content
         1fr
         min-content;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: min-content 1fr;
 }
 
-header, nav, footer
+header,
+nav,
+footer
 {
     background-color: var(--color-theme-1);
 }
-header,footer
+
+header,
+footer
 {
     grid-column: 1 /span 2;
     z-index: 1;
@@ -62,68 +34,78 @@ header
 
 nav
 {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 1em;
-    gap: 1em;
+    grid-template-columns: min-content;
+    grid-template-rows: min-content;
     grid-auto-rows: min-content;
+    padding: var(--base-padding);
+    gap: var(--base-padding);
+    justify-content: center;
     overflow-y: scroll;
+    
 }
+
 
 main
 {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
     background-color: var(--color-theme-2);
     overflow-y: scroll;
 }
 
-/*next 2 to render only one article -- last one is render whenthe target is empty*/
-main > article:target ~ article:last-child, main > article {
+/*next 2 to render only one article 
+-- last one is render whenthe target is empty*/
+main > article:target ~ article:last-child,
+main > article {
     display: none;
 }
 
 /* :last-child works, but for some reason article:last-child will not */
 main > :last-child, main > article:target {
     display: grid;
+    animation: fadeIn linear 1s;
 }
 
-article[id]::before, section[id]::before
+article[id]::before,
+section[id]::before
 {
     content: attr(id);
     text-decoration: underline;
     text-transform:capitalize;
 }
 
-article
-{
+article,
+section
+{ 
     grid-template-columns: 1fr;
+    grid-template-rows: min-content;
     grid-auto-rows: min-content;
-    gap: 1em;
-    padding: 1em;
-    animation: fadeIn linear 1s;
-    grid-auto-rows: max-content;
+}
+
+article,
+section
+{
+    padding: var(--base-padding);
+    gap: var(--base-padding);
 }
 
 section
 {
-    padding-left: 1em;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
 }
 
 footer
 {
     text-align: right;
-    font-size: 0.8em;
+    font-size: 0.8;
     box-shadow: 0px -1px 6px 0px rgba(0, 0, 0, 0.6);
 }
 
 a
 {
-    display: block;
     background-color: var(--color-theme-3);
     border-radius: 0.5em;
-    padding: 1em;
+    padding: 0.4em;
     text-align: center;
     box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.6);
     transition: box-shadow 0.15s ease-in-out;
@@ -139,22 +121,25 @@ a:hover
 {
     box-shadow: 1px 1px 6px 6px rgba(0, 0, 0, 0.6);
 }
-
-article#twitch
+/*lets go clean*/
+article#twitch,
+article#protopotes
 {
-    grid-template-rows: min-content min-content 1fr ;
+    grid-template-rows: min-content min-content 1fr;
 }
 
-article#twitch > section:last-of-type
+article#twitch > section:last-of-type,
+article#protopotes > section:last-of-type
 {
-    padding: 0;
+    grid-template-rows: 1fr min-content;
+    padding-left: 0;
+    gap: 0;
 }
 
-iframe
+cite
 {
-    height: 100%;
-    --tmp: attr(height);
-    width: 100%
+    text-align: right;
+    font-size: 0.6em;
 }
 
 @keyframes fadeIn {
@@ -165,7 +150,7 @@ iframe
 @media screen and (orientation:portrait) {
     body
     {
-        font-size: 4em;
+        font-size: 3em;
     }
     nav
     {
