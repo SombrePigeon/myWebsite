@@ -1,3 +1,4 @@
+/*color themes dependings on browser preferencies*/
 @media (prefers-color-scheme: light)
 {
     :root
@@ -20,6 +21,7 @@
     }
 }
 
+/*global variables*/
 :root
 {
     --base-padding:0.8em;
@@ -40,6 +42,7 @@ iframe
     padding: 0;
 }
 
+/*everything is grid in my lair*/
 body,
 body *
 {
@@ -48,4 +51,9 @@ body *
     grid-template-rows: 1fr;
     grid-auto-rows: 1fr;
     grid-auto-columns: 1fr;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+  100% {opacity:1;}
 }

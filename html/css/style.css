@@ -1,14 +1,16 @@
 @import url(base.css);
+@import url(desktop.css) only screen and (min-width: 600px);
+@import url(mobile.css) only screen and (max-width: 600px);
 
+/**/
 body
 {
-    color: var(--color-theme-4);
     font-size: 2em;
+    color: var(--color-theme-4);
     grid-template-rows: 
         min-content
         1fr
         min-content;
-    grid-template-columns: min-content 1fr;
 }
 
 header,
@@ -21,7 +23,6 @@ footer
 header,
 footer
 {
-    grid-column: 1 /span 2;
     z-index: 1;
 }
 
@@ -37,11 +38,26 @@ nav
     grid-template-columns: min-content;
     grid-template-rows: min-content;
     grid-auto-rows: min-content;
-    padding: var(--base-padding);
     gap: var(--base-padding);
+    padding-left: 0.3em;
+    padding-right: 0.3em;
     justify-content: center;
-    overflow-y: scroll;
-    
+    z-index: 2;
+    overflow-y: auto; 
+}
+
+/*menu burger*/
+nav>input,
+nav>label
+{
+    font-size: 2em;
+    grid-row: 1;
+    grid-column: 1;
+}
+nav>input
+{
+    opacity: 0.01;
+    z-index: 1;
 }
 
 
@@ -52,14 +68,17 @@ main
 }
 
 /*next 2 to render only one article 
--- last one is render whenthe target is empty*/
+-- last one is render when the target is empty*/
 main > article:target ~ article:last-child,
-main > article {
+main > article
+{
     display: none;
 }
 
 /* :last-child works, but for some reason article:last-child will not */
-main > :last-child, main > article:target {
+main > :last-child,
+main > article:target
+{
     display: grid;
     animation: fadeIn linear 1s;
 }
@@ -142,24 +161,5 @@ cite
     font-size: 0.6em;
 }
 
-@keyframes fadeIn {
-    0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-@media screen and (orientation:portrait) {
-    body
-    {
-        font-size: 3em;
-    }
-    nav
-    {
-        display: none;
-    }
-    main
-    {
-        grid-column: 1/span 2;
-    }
-}
 
   
