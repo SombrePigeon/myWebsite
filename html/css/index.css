@@ -13,27 +13,27 @@ body
         min-content;
 }
 
-header,
-nav,
-footer
+body>header,
+body>nav,
+body>footer
 {
     background-color: var(--color-theme-1);
 }
 
-header,
-footer
+body>header,
+body>footer
 {
     z-index: 1;
 }
 
-header
+body>header
 {
     font-size: 2em;
     text-align: center;
     box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.6);
 }
 
-nav
+body>nav
 {
     grid-template-columns: min-content;
     grid-template-rows: min-content;
@@ -56,12 +56,12 @@ nav>label
 }
 nav>input
 {
-    opacity: 0.01;
+    opacity: 0;
     z-index: 1;
 }
 
 
-main
+body>main
 {
     background-color: var(--color-theme-2);
     overflow-y: scroll;
@@ -83,27 +83,10 @@ main > article:target
     animation: fadeIn linear 1s;
 }
 
-article[id]::before,
-section[id]::before
+article header
 {
-    content: attr(id);
     text-decoration: underline;
     text-transform:capitalize;
-}
-
-article,
-section
-{ 
-    grid-template-columns: 1fr;
-    grid-template-rows: min-content;
-    grid-auto-rows: min-content;
-}
-
-article,
-section
-{
-    padding: var(--base-padding);
-    gap: var(--base-padding);
 }
 
 section
@@ -140,6 +123,17 @@ a:hover
 {
     box-shadow: 1px 1px 6px 6px rgba(0, 0, 0, 0.6);
 }
+
+/*pages*/
+article#presentation,
+article#presentation section
+{ 
+    grid-template-rows: min-content;
+    grid-auto-rows: min-content;
+    padding: var(--base-padding);
+    gap: var(--base-padding);
+}
+
 /*lets go clean*/
 article#twitch,
 article#protopotes
@@ -160,6 +154,3 @@ cite
     text-align: right;
     font-size: 0.6em;
 }
-
-
-  
