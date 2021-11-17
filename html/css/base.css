@@ -7,7 +7,7 @@
         --color-theme-2:#D0E8F2;
         --color-theme-3:#79A3B1;
         --color-theme-4:#456268;*/
-        /*bacause light colors suck currently*/
+        /*because light colors suck currently*/
         --color-theme-1:#382933;
         --color-theme-2:#3B5249;
         --color-theme-3:#519872;
@@ -35,7 +35,8 @@
 /*reset most default css*/
 html,
 body,
-iframe
+iframe,
+img
 {
     height: 100%;
     width: 100%;
