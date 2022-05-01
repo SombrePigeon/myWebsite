@@ -8,11 +8,19 @@ else
  $(error : WEBSITES_ENV is not defined to "dev" or "prod";)
 endif
 
-update: $(COMPOSE_FILE) dockerfile
+update: update-check
+	$(MAKE) .update
+
+.update: $(COMPOSE_FILE) Dockerfile 
 	$(MAKE) down
 	docker-compose -f $(COMPOSE_FILE) up -d --build
-	touch update
+	@touch .update
 
 down:
 	docker-compose -f $(COMPOSE_FILE) down
-	rm -f update
+	@rm -f .update
+
+update-check:
+	docker-compose ps -q | grep -q "" || rm -f .update
+
+.PHONY: update update-check down
