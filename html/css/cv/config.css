@@ -1,0 +1,9 @@
+/*global variables*/
+:root
+{
+    --base-padding:0.4em;
+    --body-padding:0.5em;
+    --font-size:14px;
+    --column-size:15em;
+    --pic-width:9em;
+}

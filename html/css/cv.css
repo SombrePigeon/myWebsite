@@ -1,96 +1,17 @@
-@import url(base.css);
+@import url(cv/reset.css);
+@import url(cv/config.css);
+@import url(cv/document.css);
+@import url(cv/main.css);
+@import url(cv/articles.css);
+@import url(cv/articles/environnement_technique.css);
+@import url(cv/articles/experiences_et_formation.css);
+@import url(cv/articles/formation.css);
+@import url(cv/print.css);
 
-
-body
-{
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    background: linear-gradient(135deg, var(--color-lv2),var(--color-lv4));
-}
-
-/*mode document*/
-body,
-body *
-{
-    grid-template-rows: min-content;
-    grid-auto-rows: min-content;
-}
-
-/*pour faire une marge yay, c'est trop propre :'( */
-body
-{
-    margin: 1em;
-    width: calc(100% - 1em);
-}
-
-/*gaps*/
-body,
-body>main,
-body>main>article
-{
-    gap: 1em;
-}
-
-body>main>article>section>aside:not(:first-of-type),
-body>main>article>section>header:not(:first-of-type)
-{
-    margin-top: 1em;
-}
-
-/**/
-body>header
-{
-    font-size: 1.5em;
-    font-weight: bold;
-    text-align: center;
-    background-color: var(--color-lv5);
-}
-/*structure des articles*/
-body>main>article
-{
-    grid-template-columns: 10em 1fr;
-}
-
-body>main>article>header
-{
-    grid-column: 1;
-    border-right: darkturquoise solid;
-}
-
-body>main>article>section
-{
-    grid-column: 2;
-    grid-template-columns: 1fr 15em ;
-    grid-auto-flow: dense;
-}
-
-body>main>article>section>header
-{
-    grid-column: 1;
-}
-
-body>main>article>section>section
-{
-    grid-column: 1;
-}
-
-body>main>article>section>aside
-{
-    grid-column: 2;
-    grid-row :span 2;
-}
 
 /*spécific présentation*/
-body>main>article[id="presentation"]>section
-{
-    grid-template-columns: 1fr 10em;
-}
 
 
-footer
-{
-    font-size: 0.7em;
-    text-align: right;
-    background-color: var(--color-lv2);
-}
+
+
 
