@@ -1,0 +1,21 @@
+/*everything is grid in my lair*/
+body,
+body *
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+    grid-auto-rows: min-content;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: row;
+}
+
+body
+{
+    padding: var(--body-padding);
+}
+
+p
+{
+    text-indent: 1em;
+}

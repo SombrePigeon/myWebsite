@@ -1,0 +1,61 @@
+/*base document*/
+body
+{
+    font-size: var(--font-size);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /*background: linear-gradient(135deg, var(--color-lv2),var(--color-lv4));*/
+    /*background: linear-gradient(to bottom right, white, rgb(64, 224, 208));*/
+    background: content-box red;
+
+    background-repeat: space;
+}
+
+/*gaps*/
+body
+{
+    gap: var(--body-padding);
+}
+
+body>main
+{
+    gap: var(--base-padding);
+}
+
+body>main>article
+{
+    gap: var(--base-padding);
+}
+
+
+
+
+
+/*fonts*/
+header
+{
+    font-size: 1.2em;
+}
+body>header
+{
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--color-lv5);
+}
+
+/*main structure*/
+main
+{
+    grid-template-columns: var(--column-size) 1fr ;
+}
+
+footer
+{
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+    font-size: 0.7em;
+    text-align: right;
+    background-color: var(--color-lv2);
+}
+
+p

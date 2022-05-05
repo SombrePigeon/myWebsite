@@ -1,0 +1,21 @@
+
+/*print rules*/
+@page
+{
+    size: A4 portrait;
+    margin: 1cm;
+}
+
+@media print
+{
+    /*html,
+    body
+    {
+        width: 210mm;
+        height: 297mm;
+    }*/
+    body>*
+    {
+        break-after: avoid;
+    }
+}

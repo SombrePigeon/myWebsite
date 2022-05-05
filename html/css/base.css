@@ -35,10 +35,14 @@
 /*reset most default css*/
 html,
 body,
-iframe,
-img
+iframe
 {
     height: 100%;
+    width: 100%;
+}
+
+img
+{
     width: 100%;
 }
 
