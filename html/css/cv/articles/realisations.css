@@ -1,0 +1,34 @@
+article[id="realisations"]
+{
+    grid-template-columns: 1fr 1fr;
+}
+
+article[id="realisations"]>header
+{
+    grid-column: 1 /span 2;
+}
+
+article[id="realisations"]>section
+{
+    grid-template-columns: max-content min-content 1fr;
+}
+
+article[id="realisations"]>section>header,
+article[id="realisations"]>section>a
+{
+    grid-row: 1;
+}
+
+article[id="realisations"]>section>p
+{
+    grid-column: 1 /span 3;
+}
+
+/*web only*/
+@media not print
+{
+    article[id="realisations"] a::before
+    {
+        content: "🔗";
+    }
+}
