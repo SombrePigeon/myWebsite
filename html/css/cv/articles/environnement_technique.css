@@ -1,21 +1,47 @@
-article[id="environnement_technique"]>section
+article[id="environnement_technique"]
 {
     grid-template-columns: 1fr 1fr ;
     column-gap: var(--base-padding);
 }
+
+article[id="environnement_technique"]>header
+{
+    grid-column: 1 /span 2;
+}
+
+article[id="environnement_technique"]>section
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 article[id="environnement_technique"]>section>*
 {
+    height: min-content;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
+}
+
+article[id="environnement_technique"]>section>span
+{
+    width: 50%;
 }
 
 article[id="environnement_technique"]>section>header
 {
-    grid-column: 1 / span 2;
-    background-color: red;
+    width: 100%;
+    /*grid-column: 1 / span 2;*/
+    background-color: var(--color-theme-block);
 }
 
-article[id="environnement_technique"]>section>span:nth-of-type(2n+1):last-of-type
+/*last section specific*/
+article[id="environnement_technique"]>section:nth-of-type(2n+1):last-of-type
 {
     grid-column: 1 / span 2;
 }
 
+article[id="environnement_technique"]>section:nth-of-type(2n+1):last-of-type>span
+{
+    width: 25%;
+}

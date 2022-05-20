@@ -1,11 +1,15 @@
 @import url(cv/reset.css);
 @import url(cv/config.css);
-@import url(cv/document.css);
+@import url(cv/base.css);
 @import url(cv/main.css);
 @import url(cv/articles.css);
+@import url(cv/articles/presentation.css);
+@import url(cv/articles/competences_clefs.css);
 @import url(cv/articles/environnement_technique.css);
 @import url(cv/articles/experiences_et_formation.css);
-@import url(cv/articles/formation.css);
+@import url(cv/articles/realisations.css);
+@import url(cv/articles/centres_d_interet.css);
+@import url(cv/articles/contact_me.css);
 @import url(cv/print.css);
 
 

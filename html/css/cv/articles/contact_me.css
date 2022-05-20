@@ -1,0 +1,61 @@
+/*web*/
+
+
+
+@media not print
+{
+    article[id="contact_me"]
+    {
+        display: flex;
+        flex-wrap:wrap;
+
+    }
+    article[id="contact_me"]>header
+    {
+        width: 100%;
+    }
+
+    article[id="contact_me"] a
+    {
+        width: 6em;
+        height: 4em;
+        margin-left: auto;
+        margin-right: auto;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: center;
+    }
+
+    article[id="contact_me"] a[href*="twitch"]
+    {
+        background-image: url(../../../icons/878px-Twitch_Glitch_Logo_Purple.svg.png);
+    }
+
+    article[id="contact_me"] a[href*="sombrepigeon.fr"]
+    {
+        position: relative;
+    }
+
+    article[id="contact_me"] a[href*="sombrepigeon.fr"]::before
+    {
+        content: "Mon Site Web";
+        font-style: bold;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    article[id="contact_me"] a[href*="github"]
+    {
+        background-image: var(--git-url);
+    }
+    
+}
+
+@media print
+{
+    article[id="contact_me"] a::before
+    {
+        content: attr(href);
+    }
+}

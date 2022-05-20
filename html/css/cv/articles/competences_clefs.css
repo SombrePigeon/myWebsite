@@ -1,0 +1,13 @@
+article[id="competences_clefs"]
+{
+    grid-template-columns: 1fr 1fr;
+}
+article[id="competences_clefs"]>header
+{
+    grid-column: 1 /span 2;
+}
+
+article[id="competences_clefs"]>span
+{
+    text-align: center;
+}

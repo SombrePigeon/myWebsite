@@ -1,0 +1,20 @@
+article[id="centres_d_interet"]
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+
+}
+
+article[id="centres_d_interet"]>header
+{
+    width: 100%;
+}
+
+article[id="centres_d_interet"]>span
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 33%;
+}

@@ -8,14 +8,12 @@
 
 @media print
 {
-    /*html,
-    body
+    :root
     {
-        width: 210mm;
-        height: 297mm;
-    }*/
-    body>*
-    {
-        break-after: avoid;
+        --color-theme-background:white;
+        --color-theme-underline:#3B5249;
+        --color-theme-article:white;
+        --color-theme-block:lightgrey;
+        --color-theme-text: #181a1b;
     }
 }

@@ -4,6 +4,7 @@ article[id="formation"]>section
     grid-template-columns: min-content 1fr ;
     column-gap: var(--base-padding);
 }
+
 article[id="experiences_professionnelles"]>section>time,
 article[id="formation"]>section>time
 {
@@ -16,6 +17,7 @@ article[id="experiences_professionnelles"]>section>header,
 article[id="formation"]>section>header
 {
     grid-column: 2;
+    text-decoration: underline;
 }
 
 article[id="experiences_professionnelles"]>section>span,
@@ -23,17 +25,14 @@ article[id="formation"]>section>span,
 article[id="experiences_professionnelles"]>section>address,
 article[id="formation"]>section>address
 {
-    grid-column: 2 ;
+    grid-column: 2;
 }
-
-
 
 article[id="experiences_professionnelles"]>section>address,
 article[id="formation"]>section>address
 {
     text-align: right;
 }
-
 
 article[id="experiences_professionnelles"]>section>time:before,
 article[id="formation"]>section>time:before

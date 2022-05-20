@@ -3,7 +3,35 @@
 {
     --base-padding:0.4em;
     --body-padding:0.5em;
-    --font-size:14px;
+    --font-size:18px;
     --column-size:15em;
     --pic-width:9em;
+    --gap-main:1em;
+    --main-size:70em;
+}
+
+@media (prefers-color-scheme: light)
+{
+    :root
+    {
+        --color-theme-background:#e8e6e3;
+        --color-theme-underline:#3B5249;
+        --color-theme-article:#d0d0d0;
+        --color-theme-block: lawngreen;
+        --color-theme-text: #181a1b;
+        --git-url:url(../../../icons/GitHub-Mark-64px.png);
+    }
+}
+
+@media (prefers-color-scheme: dark)
+{
+    :root
+    {
+        --color-theme-background:#181a1b;
+        --color-theme-underline:#3B5249;
+        --color-theme-article:#262a2b;
+        --color-theme-block: darkgreen;
+        --color-theme-text:#e8e6e3;
+        --git-url:url(../../../icons/GitHub-Mark-Light-64px.png);
+    }
 }

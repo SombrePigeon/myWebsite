@@ -12,10 +12,10 @@ body *
 
 body
 {
+    font-size: var(--font-size);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: var(--color-theme-background);
+    color: var(--color-theme-text);
     padding: var(--body-padding);
-}
-
-p
-{
-    text-indent: 1em;
+    gap: var(--body-padding);
 }
