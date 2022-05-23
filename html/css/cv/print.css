@@ -3,13 +3,14 @@
 @page
 {
     size: A4 portrait;
-    margin: 1cm;
+    margin: 0.5cm;
 }
 
 @media print
 {
     :root
     {
+        --font-size:14.6px;
         --color-theme-background:white;
         --color-theme-underline:#3B5249;
         --color-theme-article:white;

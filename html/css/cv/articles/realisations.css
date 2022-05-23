@@ -1,6 +1,7 @@
 article[id="realisations"]
 {
     grid-template-columns: 1fr 1fr;
+    gap: var(--base-padding);
 }
 
 article[id="realisations"]>header

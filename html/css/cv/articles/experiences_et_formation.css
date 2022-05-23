@@ -17,6 +17,7 @@ article[id="experiences_professionnelles"]>section>header,
 article[id="formation"]>section>header
 {
     grid-column: 2;
+    grid-row: 1;
     text-decoration: underline;
 }
 
@@ -39,7 +40,7 @@ article[id="formation"]>section>time:before
 {
     content: attr(datetime);
 }
-article[id="experiences_professionnelles"]>section>time:after,
+article[id="experiences_professionnelles"]>section>time:first-of-type::after,
 article[id="formation"]>section>time:after
 {
     content: " : ";
