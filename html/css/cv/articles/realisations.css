@@ -14,6 +14,11 @@ article[id="realisations"]>section
     grid-template-columns: max-content min-content 1fr;
 }
 
+article[id="realisations"]>section>header
+{
+    text-decoration: underline;
+}
+
 article[id="realisations"]>section>header,
 article[id="realisations"]>section>a
 {
