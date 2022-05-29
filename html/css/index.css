@@ -1,3 +1,4 @@
+@import url(config.css);
 @import url(base.css);
 @import url(desktop.css) only screen and (min-width: 600px);
 @import url(mobile.css) only screen and (max-width: 600px);
@@ -5,19 +6,13 @@
 /**/
 body
 {
-    font-size: 2em;
-    color: var(--color-theme-4);
+    font-size: 1em;
+    color: var(--color-theme-text);
     grid-template-rows: 
         min-content
         1fr
         min-content;
-}
-
-body>header,
-body>nav,
-body>footer
-{
-    background-color: var(--color-theme-1);
+    background-color: var(--color-theme-article);
 }
 
 body>header,
@@ -30,7 +25,7 @@ body>header
 {
     font-size: 2em;
     text-align: center;
-    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 1px 6px 0px var(--color-theme-article);
 }
 
 body>nav
@@ -63,7 +58,12 @@ nav>input
 
 body>main
 {
-    background-color: var(--color-theme-2);
+    background-color: var(--color-theme-background);
+    
+}
+
+article#cv
+{
     overflow-y: scroll;
 }
 
